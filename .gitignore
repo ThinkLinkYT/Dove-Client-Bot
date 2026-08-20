@@ -1,0 +1,37 @@
+# Environment variables (contains bot secret tokens & API keys)
+.env
+.env.local
+*.env
+
+# Dependency directories
+node_modules/
+jspm_packages/
+web_modules/
+
+# Python virtual environment & cache files
+__pycache__/
+*.py[cod]
+*$py.class
+venv/
+.venv/
+env/
+ENV/
+
+# System and IDE files
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+
+# Logs & debugging
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Database / Storage (if using local SQLite or JSON data)
+*.sqlite
+*.sqlite3
+*.db
+data.json
