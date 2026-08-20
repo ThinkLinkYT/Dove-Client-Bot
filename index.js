@@ -26,5 +26,17 @@ for (const file of eventFiles) {
     }
 }
 
+// ... your other index.js code ...
+
+const startGitHubWebhook = require('./src/webhooks/github.js');
+
+client.once('ready', () => {
+    // Start the web server once the bot is fully online
+    startGitHubWebhook(client);
+});
+
+// 3. Log in to Discord
+client.login(process.env.BOT_TOKEN);
+
 // 3. Log in to Discord
 client.login(process.env.BOT_TOKEN);
