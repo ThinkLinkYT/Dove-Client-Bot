@@ -7,13 +7,20 @@ module.exports = {
         if (interaction.isChatInputCommand()) {
             // Note: In a full handler, you'd dynamically map commands. 
             // For now, we manually route the two commands we made.
+            // --- 1. HANDLE SLASH COMMANDS ---
+        if (interaction.isChatInputCommand()) {
             if (interaction.commandName === 'setup-verify') {
                 const command = require('../commands/admin/setupVerify.js');
                 await command.execute(interaction);
             } else if (interaction.commandName === 'role') {
                 const command = require('../commands/utility/role.js');
                 await command.execute(interaction);
+            } else if (interaction.commandName === 'rules') { // <-- ADD THIS BLOCK
+                const command = require('../commands/utility/rules.js');
+                await command.execute(interaction);
             }
+            return;
+        }
             return;
         }
 
